@@ -1,0 +1,9 @@
+cat <<EOF | kubectl create -f -
+apiVersion: shipwright.io/v1alpha1
+kind: BuildRun
+metadata:
+  generateName: buildpack-nodejs-buildrun-
+spec:
+  buildRef:
+    name: buildpack-nodejs-build
+EOF
